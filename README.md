@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MSR Coder Profile 🚀
 
-# Run and deploy your AI Studio app
+Personal developer profile / portfolio built with **React + TypeScript + Vite**.  
+The project focuses on clean UI, modern tooling, and production-ready structure.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Dc_VFg7DxqQOi8WzGCDHEDaNRrJ1JEWg
+## ✨ Features
 
-## Run Locally
+- ⚛️ React with TypeScript
+- ⚡ Vite for fast development & build
+- 🧱 Component-based architecture
+- 🎨 Clean and minimal UI
+- 🌍 Ready for deployment on Cloudflare Pages / Vercel / Netlify
+- 🔒 Environment variables support
+- 📦 Optimized production build
 
-**Prerequisites:**  Node.js
+---
 
+## 🛠️ Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Frontend:** React, TypeScript
+- **Bundler:** Vite
+- **Styling:** CSS / Custom styles
+- **Package Manager:** npm
+- **Deployment:** Cloudflare Pages (recommended)
+
+---
+
+## 📁 Project Structure
+
+```text
+.
+├── components/        # Reusable UI components
+├── types.ts           # Global TypeScript types
+├── App.tsx            # Main App component
+├── index.tsx          # Application entry point
+├── index.html         # HTML template
+├── vite.config.ts     # Vite configuration
+├── tsconfig.json      # TypeScript configuration
+├── .env.local         # Environment variables
+├── package.json       # Dependencies & scripts
+└── README.md
