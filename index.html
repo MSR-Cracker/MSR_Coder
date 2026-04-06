@@ -22,7 +22,6 @@
         -ms-user-select: none;
       }
       
-      /* Disable Selection Globally */
       * {
         user-select: none;
         -webkit-user-select: none;
@@ -31,14 +30,12 @@
         cursor: url('https://r2.guns.lol/da5b89a6-9417-41bd-a485-197c598728d4.png') 16 16, auto !important;
       }
 
-      /* Disable Image Dragging */
       img {
         pointer-events: none;
         -webkit-user-drag: none;
         user-drag: none;
       }
 
-      /* Snowflake Animation */
       @keyframes snowfall {
         0% {
           transform: translateY(-10vh) translateX(0);
@@ -60,12 +57,11 @@
         z-index: 50;
       }
 
-      /* Range Slider Styling */
       input[type=range] {
         -webkit-appearance: none;
         width: 100%;
         background: transparent;
-        pointer-events: auto !important; /* Allow interaction with sliders */
+        pointer-events: auto !important;
         cursor: pointer !important;
       }
       
@@ -92,7 +88,6 @@
         outline: none;
       }
       
-      /* Allow clicking on links and buttons */
       a, button {
         pointer-events: auto !important;
         cursor: pointer !important;
@@ -108,37 +103,45 @@
 }
 </script>
 <script>
-  // Anti-Copy/Paste/View-Source/DevTools
   document.addEventListener('contextmenu', event => event.preventDefault());
   
   document.addEventListener('keydown', event => {
-    // Block F12
+    if (event.ctrlKey && (event.key === 'c' || event.key === 'C')) {
+      event.preventDefault();
+      return false;
+    }
+    if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
+      event.preventDefault();
+      return false;
+    }
+    if (event.ctrlKey && (event.key === 's' || event.key === 'S')) {
+      event.preventDefault();
+      return false;
+    }
+    if (event.ctrlKey && (event.key === 'v' || event.key === 'V')) {
+      event.preventDefault();
+      return false;
+    }
+    if (event.ctrlKey && (event.key === 'x' || event.key === 'X')) {
+      event.preventDefault();
+      return false;
+    }
     if (event.key === 'F12') {
       event.preventDefault();
       return false;
     }
-
-    // Block Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Inspect Element)
-    if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j' || event.key === 'C' || event.key === 'c')) {
-      event.preventDefault();
-      return false;
-    }
-
-    // Block Ctrl+U (View Source)
-    if (event.ctrlKey && (event.key === 'U' || event.key === 'u')) {
-      event.preventDefault();
-      return false;
-    }
-    
-    // Block Ctrl+S (Save Page)
-    if (event.ctrlKey && (event.key === 'S' || event.key === 's')) {
+    if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i')) {
       event.preventDefault();
       return false;
     }
   });
 
-  // Block Dragging
+  document.addEventListener('selectstart', event => event.preventDefault());
+  document.addEventListener('copy', event => event.preventDefault());
+  document.addEventListener('cut', event => event.preventDefault());
   document.addEventListener('dragstart', event => event.preventDefault());
+  
+  console.log("هات بوسة 💋", "color: red; font-size: 16px;");
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
