@@ -83,7 +83,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ isPlaying }) => {
 
         {/* Username */}
         <h1 className="text-white text-4xl font-bold mb-2 text-center drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] tracking-wider font-mono">
-          𝗠𝗦𝗥_𝗖𝗼𝗱𝗲𝗿
+          𝗠𝗦𝗥 𝗖𝗼𝗱𝗲𝗿
         </h1>
 
         {/* Description */}
